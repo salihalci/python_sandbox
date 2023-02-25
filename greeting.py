@@ -19,7 +19,7 @@ for keys in student_scores:
 
 for keys in greetings:
     print(f"{keys} pass status is {greetings[keys]}")
-    
+
 
 
 
