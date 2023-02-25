@@ -1,4 +1,4 @@
-
+#dictionary example
 student_scores={
             "Harry":81,
             "Ron":78,
@@ -7,7 +7,6 @@ student_scores={
             "Nevile":62
         }
 
-print("Hello!")
 
 greetings={}
 
