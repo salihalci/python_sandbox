@@ -1,0 +1,11 @@
+(1,'What two methods can you use to restrict public Internet access to a function app?','Removal of HTTP triggers. IP Access restriction'),
+(2,'What is the maximum VM count in scale set?','1000')
+(3,'ISE Integration Service Environment','To run logic App on its own environment. -Their own hardware with no other customers.')
+(4,'What is the maximum apps in an App Service.','10')
+(5,'What is Data Collector API method?','Azure Monitor can collect data from any source with this API. Not just built in sources.')
+(6,'App Service Depoyment Options','1-Dropbox 2-Github 3-FTP 4- Portal is Wrong Answer!')
+(7,'What does App Service Environment ASE provide that an App Service Plan does not provide?','Fully isolated and dedicated environment.')
+(8,'What is the total maximum capacity of an unmanaged Azure Storage account in North America?','5PB')
+(9,'What is the maximum file size of block blob?','190.7 TB')
+(10,'What Azure powershell command for creating Web App?','New-AzWebApp')
+

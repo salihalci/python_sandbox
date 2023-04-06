@@ -10,7 +10,6 @@ c.execute("SELECT * FROM questions")
 #c.fetchall()
 
 print(c.fetchall())
-print(c.fetchall())
 
 conn.commit()
 conn.close()
