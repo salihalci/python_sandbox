@@ -9,7 +9,12 @@ c.execute("SELECT * FROM questions")
 #c.fetchmany(3)
 #c.fetchall()
 
-print(c.fetchall())
+#print(c.fetchall())
+
+items = c.fetchall()
+
+for x in items:
+    print(f"{x[0]} Question {x[1]} ")
 
 conn.commit()
 conn.close()
