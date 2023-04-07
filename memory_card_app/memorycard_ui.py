@@ -1,5 +1,22 @@
-import tkinter
+import tkinter,sqlite3
 
+conn = sqlite3.connect('memorycards.db')
+c=conn.cursor()
+
+record = c.execute("SELECT * FROM questions where id=58")
+
+
+fetched_record = record.fetchone()
+
+#controls is record properly
+if fetched_record!=None:
+    print(fetched_record)
+
+
+
+#print(record[0])
+conn.commit()
+conn.close()
 window = tkinter.Tk()
 
 window.title("Memory Cards!")
