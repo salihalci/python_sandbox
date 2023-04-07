@@ -3,14 +3,14 @@ import tkinter,sqlite3
 conn = sqlite3.connect('memorycards.db')
 c=conn.cursor()
 
-record = c.execute("SELECT * FROM questions where id=58")
+record = c.execute("SELECT * FROM questions where id=1")
 
 
 fetched_record = record.fetchone()
 
 #controls is record properly
-if fetched_record!=None:
-    print(fetched_record)
+if fetched_record is not None:
+    print(fetched_record[1])
 
 
 
@@ -25,7 +25,7 @@ window.minsize(width=500,height=300)
 
 
 #Write core here!
-lbl_Question=tkinter.Label(text="Question Label",
+lbl_Question=tkinter.Label(text=fetched_record[1],
                            font=("Arial",14,"bold")
                            )
 lbl_Question.pack()
