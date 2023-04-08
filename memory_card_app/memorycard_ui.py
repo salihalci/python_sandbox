@@ -3,7 +3,7 @@ import tkinter,sqlite3
 conn = sqlite3.connect('memorycards.db')
 c=conn.cursor()
 
-record = c.execute("SELECT * FROM questions where id=1")
+record = c.execute("SELECT  * FROM questions where id=1")
 
 
 fetched_record = record.fetchone()

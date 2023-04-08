@@ -22,4 +22,13 @@ for keys in greetings:
 
 
 
+multiline_str="""
+This is a multiline string!
+This is very useful!
+I like that
+"""
+print(multiline_str)
+
+
+
 
