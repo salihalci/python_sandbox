@@ -17,22 +17,27 @@ if fetched_record is not None:
 #print(record[0])
 conn.commit()
 conn.close()
+
 window = tkinter.Tk()
+def set_answer():
+    print(fetched_record[2])
+    lbl_Answer['text']=fetched_record[2]
+
 
 window.title("Memory Cards!")
 window.minsize(width=500,height=300)
 
 
-
-
 lbl_Question=tkinter.Label(text=fetched_record[1],
-                           font=("Arial",14,"bold")
+                           font=("Arial", 14, "bold")
                            )
 lbl_Question.pack()
 
 
 btn_ShowAnswer = tkinter.Button(text="Answer",
-                                font=("Arial",14,"bold"))
+                                font=("Arial", 14, "bold"),
+                                command=set_answer
+                                )
 btn_ShowAnswer.pack()
 
 
@@ -40,7 +45,7 @@ btn_ShowAnswer.pack()
 lbl_Answer=tkinter.Label(text="Answer Label",
                            font=("Arial",14,"bold")
                            )
-lbl_Answer.pack()
 
+lbl_Answer.pack()
 
 window.mainloop()
