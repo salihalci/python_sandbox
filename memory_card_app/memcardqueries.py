@@ -1,6 +1,6 @@
 import sqlite3
 
-conn= sqlite3.connect("memorycards.db")
+conn= sqlite3.connect("./memorycards.db")
 
 c = conn.cursor()
 

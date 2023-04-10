@@ -4,7 +4,7 @@ Created for memoryCards application.
 Responsible for bulk question insert operations to the table.
 """
 #conn = sqlite3.connect(':memory:')
-conn = sqlite3.connect('memorycards.db')
+conn = sqlite3.connect('./memorycards.db')
 
 #if db does not exist it will create it.
 
@@ -47,7 +47,8 @@ questions_bulk = [
 (31,"What is the swap slot cmdlet command?","Invoke-AzResourceAction  /  az webapp deployment slot swap"),
 (32,"BLOB Storage Tiers General Info?","""Hot tier - An online tier optimized for storing data that is accessed or modified frequently. The hot tier has the highest storage costs, but the lowest access costs.
 Cool tier - An online tier optimized for storing data that is infrequently accessed or modified. Data in the cool tier should be stored for a minimum of 30 days. The cool tier has lower storage costs and higher access costs compared to the hot tier.
-Archive tier - An offline tier optimized for storing data that is rarely accessed, and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days. """)
+Archive tier - An offline tier optimized for storing data that is rarely accessed, and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days. """),
+(33,"What is minimum pricing tier for Application service auto scale feture","Standard")
   
 ]
 
