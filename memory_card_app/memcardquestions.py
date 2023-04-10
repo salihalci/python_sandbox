@@ -42,7 +42,7 @@ questions_bulk = [
 (26,'What do you need to use Azure AD?','1-Application ID 2-Redirect URL'),
 (27,'SQL database can auto tune which features?','1-add new indexes, 2-remove unused indexes, 3-force the last good execution plan to be used'),
 (28,'SQL Server Port','1433'),
-(29,"What is the sample bash command for deploy and redeploy an Azure App Service?","az webapp up –location westeurope –name az204samplewebhtml –html")
+(29,"What is the sample bash command for deploy and redeploy an Azure App Service?","az webapp up –location westeurope –name az204samplewebhtml –html"),
 (30,"What is cmdlet and CLI command to create new slot?","New-AzWebAppSlot  / az webapp deployment slot create"),
 (31,"What is the swap slot cmdlet command?","Invoke-AzResourceAction  /  az webapp deployment slot swap"),
 (32,"BLOB Storage Tiers General Info?","""Hot tier - An online tier optimized for storing data that is accessed or modified frequently. The hot tier has the highest storage costs, but the lowest access costs.

@@ -10,6 +10,7 @@ conn = sqlite3.connect('memorycards.db')
 c=conn.cursor()
 
 #create a table
+c.execute("DROP TABLE QUESTIONS")
 c.execute("""CREATE TABLE questions (
     id INTEGER,
     question TEXT,
