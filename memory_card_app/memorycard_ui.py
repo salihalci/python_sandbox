@@ -22,7 +22,9 @@ window = tkinter.Tk()
 def set_answer():
     print(fetched_record[2])
     lbl_Answer['text']=fetched_record[2]
-
+    
+    # this is an other way to set label TODO test it 
+    # lbl_Answer.config(text=fetched_record[2])
 
 window.title("Memory Cards!")
 window.minsize(width=500,height=300)
