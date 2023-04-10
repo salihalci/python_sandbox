@@ -42,7 +42,10 @@ questions_bulk = [
 (26,'What do you need to use Azure AD?','1-Application ID 2-Redirect URL'),
 (27,'SQL database can auto tune which features?','1-add new indexes, 2-remove unused indexes, 3-force the last good execution plan to be used'),
 (28,'SQL Server Port','1433'),
-(29,"What is the sample bash command for deploy and redeploy an Azure App Service?","az webapp up –location westeurope –name az204samplewebhtml –html")  
+(29,"What is the sample bash command for deploy and redeploy an Azure App Service?","az webapp up –location westeurope –name az204samplewebhtml –html")
+(30,"What is cmdlet to create new slot?","New-AzWebAppSlot"),
+(31,"What is the swap slot cmdlet command?,"Invoke-AzResourceAction")  
+  
 ]
 
 c.executemany("INSERT INTO questions VALUES(?,?,?)",questions_bulk)
