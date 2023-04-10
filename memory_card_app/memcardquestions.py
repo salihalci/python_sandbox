@@ -43,8 +43,8 @@ questions_bulk = [
 (27,'SQL database can auto tune which features?','1-add new indexes, 2-remove unused indexes, 3-force the last good execution plan to be used'),
 (28,'SQL Server Port','1433'),
 (29,"What is the sample bash command for deploy and redeploy an Azure App Service?","az webapp up –location westeurope –name az204samplewebhtml –html")
-(30,"What is cmdlet to create new slot?","New-AzWebAppSlot"),
-(31,"What is the swap slot cmdlet command?,"Invoke-AzResourceAction")  
+(30,"What is cmdlet and CLI command to create new slot?","New-AzWebAppSlot  / az webapp deployment slot create"),
+(31,"What is the swap slot cmdlet command?","Invoke-AzResourceAction  /  az webapp deployment slot swap")  
   
 ]
 
