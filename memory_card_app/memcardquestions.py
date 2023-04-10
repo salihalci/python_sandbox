@@ -44,7 +44,10 @@ questions_bulk = [
 (28,'SQL Server Port','1433'),
 (29,"What is the sample bash command for deploy and redeploy an Azure App Service?","az webapp up –location westeurope –name az204samplewebhtml –html")
 (30,"What is cmdlet and CLI command to create new slot?","New-AzWebAppSlot  / az webapp deployment slot create"),
-(31,"What is the swap slot cmdlet command?","Invoke-AzResourceAction  /  az webapp deployment slot swap")  
+(31,"What is the swap slot cmdlet command?","Invoke-AzResourceAction  /  az webapp deployment slot swap"),
+(32,"BLOB Storage Tiers General Info?","""Hot tier - An online tier optimized for storing data that is accessed or modified frequently. The hot tier has the highest storage costs, but the lowest access costs.
+Cool tier - An online tier optimized for storing data that is infrequently accessed or modified. Data in the cool tier should be stored for a minimum of 30 days. The cool tier has lower storage costs and higher access costs compared to the hot tier.
+Archive tier - An offline tier optimized for storing data that is rarely accessed, and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days. """)
   
 ]
 
