@@ -48,8 +48,11 @@ questions_bulk = [
 (32,"BLOB Storage Tiers General Info?","""Hot tier - An online tier optimized for storing data that is accessed or modified frequently. The hot tier has the highest storage costs, but the lowest access costs.
 Cool tier - An online tier optimized for storing data that is infrequently accessed or modified. Data in the cool tier should be stored for a minimum of 30 days. The cool tier has lower storage costs and higher access costs compared to the hot tier.
 Archive tier - An offline tier optimized for storing data that is rarely accessed, and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days. """),
-(33,"What is minimum pricing tier for Application service auto scale feture","Standard")
-  
+(33,"What is minimum pricing tier for Application service auto scale feture","Standard"),
+(34,"WebApp deployment must reduce the likelihood of lockign files during deployment from CLI","Using a production and staging slot with auto swap enabled reduces the likelihood of locked files. run 
+ az webapp deploy to a staging slot with auto swap on"), 
+(35,"What is the minimum plan for Microsoft Defener integration to Azure Functions","Basic"),
+ 
 ]
 
 c.executemany("INSERT INTO questions VALUES(?,?,?)",questions_bulk)
