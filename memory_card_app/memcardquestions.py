@@ -54,11 +54,13 @@ Archive tier - An offline tier optimized for storing data that is rarely accesse
 (36,"The consistency level must maximize throughput and minimize latency for write operations.","Eventual consistency is correct option"),
 (37,"Azure Cosmos change feed  by using a reactive model","1-Azure functions with an Azure Cosmos DB trigger. 2-Change feed processor library."),
 (38,"Azure Cosmos DB ReadItemAsync method to read items async. Which two parameters do you need.","1- partitionkey, 2-item id"),
-(39,"What are the change feed components","
+(39," * What are the change feed components","
  '1- The lease container component serves as a storage mechanism to manage state across multiple change feed consumers.' 
  '2-The delegate component is the code within the client application that implements business logic for each batch of changes.' 
  '3-The host component is a client application instance that listens for changes from the change feed.' 
- '4-The monitored container component is monitored for any insert or update operations.' ")
+ '4-The monitored container component is monitored for any insert or update operations.' "),
+(40,"Blob content download code example retry mechanism codes","The code segment that includes options.Retry.MaxRetries = 10; and options.Retry.Delay = TimeSpan.FromSeconds(20); defines the retry strategy and downloads the content to the variable data."),
+()
  
 ]
 
