@@ -32,7 +32,10 @@ for x in items:
 
 
 
-question_index=0 #initial
+question_index = 0  #initial
+
+def increment_questionindex():
+    return question_index+1
 
 window = tkinter.Tk()
 def set_answer():
@@ -41,6 +44,13 @@ def set_answer():
     
     # this is an other way to set label TODO test it 
     # lbl_Answer.config(text=fetched_record[2])
+def next_activity():
+    print("Next executed!")
+    global question_index
+    question_index +=1
+    print(question_index)
+    lbl_Question['text'] = question_list[question_index].question
+    lbl_Answer['text']=""
 
 window.title("Memory Cards!")
 window.minsize(width=500,height=300)
@@ -60,5 +70,11 @@ lbl_Answer=tkinter.Label(text="Answer Label",
                            font=("Arial",14,"bold")
                            )
 lbl_Answer.pack()
+
+btn_Next = tkinter.Button(text="Next ->",
+                                font=("Arial", 14, "bold"),
+                                command=next_activity
+                                )
+btn_Next.pack()
 
 window.mainloop()
