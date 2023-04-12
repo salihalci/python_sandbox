@@ -1,27 +1,43 @@
 import tkinter,sqlite3
 
+# model class for questions---------------------------
+class QuestionModel:
+    question=""
+    answer=""
+    index=0
+
+    def __init__(self,index,question,answer):
+        self.question=question
+        self.answer = answer
+        self.index=index
+
+# db operations--------------------------------------
 conn = sqlite3.connect('./memorycards.db')
 c=conn.cursor()
 
-record = c.execute("SELECT  * FROM questions where id=1")
+records = c.execute("SELECT  * FROM questions")
 
-
-fetched_record = record.fetchone()
-
-#controls is record properly
-if fetched_record is not None:
-    print(fetched_record[1])
-
-
+items = c.fetchall()
 
 #print(record[0])
 conn.commit()
 conn.close()
 
+#-----------------------------------------------------
+question_list = [] # contains questions array
+
+for x in items:
+    temp_item = QuestionModel(x[0],x[1],x[2])
+    question_list.append(temp_item)
+
+
+
+question_index=0 #initial
+
 window = tkinter.Tk()
 def set_answer():
-    print(fetched_record[2])
-    lbl_Answer['text']=fetched_record[2]
+
+    lbl_Answer['text']=question_list[question_index].answer
     
     # this is an other way to set label TODO test it 
     # lbl_Answer.config(text=fetched_record[2])
@@ -29,12 +45,10 @@ def set_answer():
 window.title("Memory Cards!")
 window.minsize(width=500,height=300)
 
-
-lbl_Question=tkinter.Label(text=fetched_record[1],
+lbl_Question=tkinter.Label(text=question_list[question_index].question,
                            font=("Arial", 14, "bold")
                            )
 lbl_Question.pack()
-
 
 btn_ShowAnswer = tkinter.Button(text="Answer",
                                 font=("Arial", 14, "bold"),
@@ -42,12 +56,9 @@ btn_ShowAnswer = tkinter.Button(text="Answer",
                                 )
 btn_ShowAnswer.pack()
 
-
-
 lbl_Answer=tkinter.Label(text="Answer Label",
                            font=("Arial",14,"bold")
                            )
-
 lbl_Answer.pack()
 
 window.mainloop()
