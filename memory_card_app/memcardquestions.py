@@ -49,9 +49,16 @@ questions_bulk = [
 Cool tier - An online tier optimized for storing data that is infrequently accessed or modified. Data in the cool tier should be stored for a minimum of 30 days. The cool tier has lower storage costs and higher access costs compared to the hot tier.
 Archive tier - An offline tier optimized for storing data that is rarely accessed, and that has flexible latency requirements, on the order of hours. Data in the archive tier should be stored for a minimum of 180 days. """),
 (33,"What is minimum pricing tier for Application service auto scale feture","Standard"),
-(34,"WebApp deployment must reduce the likelihood of lockign files during deployment from CLI","Using a production and staging slot with auto swap enabled reduces the likelihood of locked files. run 
- az webapp deploy to a staging slot with auto swap on"), 
-(35,"What is the minimum plan for Microsoft Defener integration to Azure Functions","Basic"),
+(34,"WebApp deployment must reduce the likelihood of lockign files during deployment from CLI","Using a production and staging slot with auto swap enabled reduces the likelihood of locked files. run az webapp deploy to a staging slot with auto swap on"), 
+(35,"What is the minimum plan for Microsoft Defener integration to Azure Functions","Anwe is Basic. Premium plan is also acceptable but expensive option. Consumption plan does not support Microsoft defener."),
+(36,"The consistency level must maximize throughput and minimize latency for write operations.","Eventual consistency is correct option"),
+(37,"Azure Cosmos change feed  by using a reactive model","1-Azure functions with an Azure Cosmos DB trigger. 2-Change feed processor library."),
+(38,"Azure Cosmos DB ReadItemAsync method to read items async. Which two parameters do you need.","1- partitionkey, 2-item id"),
+(39,"What are the change feed components","
+ '1- The lease container component serves as a storage mechanism to manage state across multiple change feed consumers.' 
+ '2-The delegate component is the code within the client application that implements business logic for each batch of changes.' 
+ '3-The host component is a client application instance that listens for changes from the change feed.' 
+ '4-The monitored container component is monitored for any insert or update operations.' ")
  
 ]
 
