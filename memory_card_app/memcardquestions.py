@@ -63,7 +63,8 @@ Archive tier - An offline tier optimized for storing data that is rarely accesse
 (41,"Blob storage Types","1- Block Blob- ideal for media files. 2-Append Blob – log files 3-Page Blobs – Emulate storage disk, ideal for virtual harddisk"),
 (42,"Set duration time to 10 seconds in Azure Cache redis?","Timespan.FromSeconds(10)"),
 (43,"You will use .NET StackExchange.Redis namespace GetDatabase method for Azure Redis what do you need first?","Create ConnectionMultiplexer object."),
-(44,"What do you need to monior an on premise app from Application Insight?","An instrumentation key uniquely designates an Application Insights resource and is the only piece of information required to provide authorized access for the purpose of uploading telemetry from monitored applications to Application Insights. ")
+(44,"What do you need to monior an on premise app from Application Insight?","An instrumentation key uniquely designates an Application Insights resource and is the only piece of information required to provide authorized access for the purpose of uploading telemetry from monitored applications to Application Insights. "),
+(45,"What are you going to do if instrumentation data is not properly collected in App Insight for API calls?","Manual instrumentation must be enabled to emit telemetry using API calls"),
  
 ]
 
