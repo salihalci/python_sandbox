@@ -59,7 +59,7 @@ Archive tier - An offline tier optimized for storing data that is rarely accesse
  2-The delegate component is the code within the client application that implements business logic for each batch of changes.
  3-The host component is a client application instance that listens for changes from the change feed. 
  4-The monitored container component is monitored for any insert or update operations. """),
-(40,"Blob content download code example retry mechanism codes","The code segment that includes options.Retry.MaxRetries = 10; and options.Retry.Delay = TimeSpan.FromSeconds(20); defines the retry strategy and downloads the content to the variable data.")
+(40,"Blob content download code example retry mechanism codes","The code segment that includes options.Retry.MaxRetries = 10; and options.Retry.Delay = TimeSpan.FromSeconds(20); defines the retry strategy and downloads the content to the variable data."),
 (41,"Blob storage Types","1- Block Blob- ideal for media files. 2-Append Blob – log files 3-Page Blobs – Emulate storage disk, ideal for virtual harddisk")
 ]
 
