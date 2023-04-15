@@ -72,7 +72,9 @@ Archive tier - An offline tier optimized for storing data that is rarely accesse
 (50,"You manage an Azure Active Directory registered application name app1. App1 calls an web API then calls Microsoft Graph. You need to ensure the signed in user identitiy is delegated through the request chain. Which authentication flow should you use?","OAuth 2.0 On-Behalf-Of flow (OBO) is used when an application invokes a service or web API, which in turn needs to call another service or web API. The idea is to propagate the delegated user identity and permissions through the request chain. "),
 (51,"Compamy plans to use Cache Redis and cacne redis modules? Which service tier is compatible?","Enterprise Redis modules are only supported in the Enterprise service tier. The Basic, Standard, and Premium service tiers do not support Redis modules."),
 (52,"Plan to use Cache Redis as the caching layer? Requirements are; prevent data loss if nodoes down, minize storage cost, optimize performance? Which solution should you use?","Redis database persistence with the soft delete feature disabled on the associated storage account ->this minimize storage cost"),
-(53,"You need to capture user actions using  Application Insight API","TrackEvent")
+(53,"You need to capture user actions using  Application Insight API","TrackEvent"),
+(54,"You need to create a prefixMatch filter rule that will contain an array of strings for prefixes to be matched. What is the first element of prefix string?","Container name."),
+(55,"Select two ways to rehydrate blob to an online tier?","1-The Copy Blob operation copies a blob to an online tier. 2-The Set Blob Tier operation sets the access tier on a blob.")
 ]
 
 c.executemany("INSERT INTO questions VALUES(?,?,?)",questions_bulk)
