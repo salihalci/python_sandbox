@@ -9,7 +9,7 @@ conn = sqlite3.connect('./memorycards.db')
 #if db does not exist it will create it.
 
 c=conn.cursor()
-#conn.execute("INSERT INTO customers VALUES('Deniz','Alcı','denizalci@gmail.com')")
+#conn.execute("INSERT INTO customers VALUES('d','A','da@gmail.com')")
 #print("record inserted.")
 
 #TODO bulk questions going to be loaded from a database or file
