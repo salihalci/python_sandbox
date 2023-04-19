@@ -76,7 +76,8 @@ Archive tier - An offline tier optimized for storing data that is rarely accesse
 (54,"You need to create a prefixMatch filter rule that will contain an array of strings for prefixes to be matched. What is the first element of prefix string?","Container name."),
 (55,"Select two ways to rehydrate blob to an online tier?","1-The Copy Blob operation copies a blob to an online tier. 2-The Set Blob Tier operation sets the access tier on a blob."),
 (56," The consistency level must ensure that update operations made as a batch within a transaction are always visible together.","Consistent Prefix"),
-(57-"What are the 2 ways to sign SAS?","1- With the storage account key 2- With user delegation key")
+(57,"What are the 2 ways to sign SAS?","1- With the storage account key 2- With user delegation key"),
+(58,"What image types supported by  Azure Container Registry?","1-Docker Image 2-OCI images 3-OCI Artifacts 4-Helm Charts") 
 ]
 
 c.executemany("INSERT INTO questions VALUES(?,?,?)",questions_bulk)
