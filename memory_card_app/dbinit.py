@@ -1,28 +1,32 @@
 import sqlite3
-"""
-Created for memory cards application.
-Creates db tables.
-"""
-#conn = sqlite3.connect(':memory:')
-conn = sqlite3.connect('./memorycards.db')
-#if db does not exist it is going to create it.
 
-c=conn.cursor()
+def createdb():
+    """
+    Created for memory cards application.
+    Creates db tables.
+    """
+    #conn = sqlite3.connect(':memory:')
+    conn = sqlite3.connect('./memorycards.db')
+    #if db does not exist it is going to create it.
 
-#create a table
-#c.execute("DROP TABLE QUESTIONS")
-c.execute("""CREATE TABLE questions (
-    id INTEGER,
-    question TEXT,
-    answer TEXT
-    )""")
-print("Memory cards db created successfuly!")
-#NULL
-#INTEGER
-#REAL
-#TEXT
-#BLOB
+    c=conn.cursor()
 
-#Commit our command
-conn.commit()
-conn.close()
+    #create a table
+    #c.execute("DROP TABLE QUESTIONS")
+    c.execute("""CREATE TABLE questions (
+        id INTEGER,
+        question TEXT,
+        answer TEXT
+        )""")
+    print("Memory cards db created successfuly!")
+    #NULL
+    #INTEGER
+    #REAL
+    #TEXT
+    #BLOB
+
+    #Commit our command
+    conn.commit()
+    conn.close()
+
+createdb()
