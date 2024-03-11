@@ -13,5 +13,6 @@ def edıtquery():
     
     return render_template("editquery.html")
 
+
 if __name__=="__main__":
     app.run(debug=True)
