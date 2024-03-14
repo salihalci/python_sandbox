@@ -1,7 +1,20 @@
 {% extends "layout.html" %}
 
 {%block body%}
-    
-    List
+    <table border="1">
+    <TR>
+        <TH>ID</TH>
+        <TH>Question</TH>
+        <TH>Answer</TH>
+    </TR>
+   {%for x in questions%}
+   <TR>
+        <TD>{{x[0]}}</TD>
+        <TD>{{x[1]}}</TD>
+        <TD>{{x[2]}}</TD>
+   </TR>
+    {%endfor%}
+
+</table>
 
 {%endblock%}

@@ -28,7 +28,8 @@ def editquery():
 
 @app.route("/list")
 def list():
-    return render_template("list.html")
+    questions = questionsdao.retrieveQuestions()
+    return render_template("list.html",questions=questions)
 
 
 

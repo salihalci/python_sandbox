@@ -26,12 +26,15 @@ def savequestion(question,answer):
 
 def retrieveQuestions():
     print("retrieve questions started")
+    
     try:
         with sqlite3.connect("memorycards.db") as con:
             cur = con.cursor()
-
+            questions = cur.execute("SELECT * FROM questions").fetchall()
+            print(type(questions))
     except:
         pass
     finally:
         con.close()
+        return questions
 
