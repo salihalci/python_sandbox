@@ -7,7 +7,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/editquery",methods=["GET","POST"])
-def edıtquery():
+def editquery():
     question = request.form.get('question')
     print(f"{question} and")
     
