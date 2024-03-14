@@ -9,7 +9,7 @@ def index():
     return render_template("index.html")
 
 @app.route("/editquestion",methods=["GET","POST"])
-def editquery():
+def editquestion():
     question = request.form.get('question')
     answer = request.form.get('answer')
     msg=""
@@ -24,7 +24,7 @@ def editquery():
             msg="Record is not created!"
 
 
-    return render_template("editquery.html",msg=msg)
+    return render_template("editquestion.html",msg=msg)
 
 @app.route("/list")
 def list():

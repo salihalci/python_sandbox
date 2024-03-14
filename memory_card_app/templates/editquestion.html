@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+Edit Questions
+{% endblock %}
+{% block content %}
+        
+<h1>Edit Question record</h1>
+        <form method="post" action="/editquestion">
+          <table>
+            <tr>
+              <th>Query:</th>
+              <td><input type="text" name="question" /></td>
+            </tr>
+            <tr>
+              <th>Answer:</th>
+              <td><input type="text" name="answer" /></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td><button name="save" type="submit">Save</button></td>
+            </tr>
+          </table>
+          {{msg}}
+        </form>      
+{% endblock %}
