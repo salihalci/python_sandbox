@@ -6,7 +6,7 @@ def createdb():
     Creates db tables.
     """
     #conn = sqlite3.connect(':memory:')
-    conn = sqlite3.connect('./memorycards.db')
+    conn = sqlite3.connect('memorycards.db')
     #if db does not exist it is going to create it.
 
     c=conn.cursor()
