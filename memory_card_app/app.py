@@ -37,9 +37,11 @@ def list():
 @app.route("/update")
 def update():
     id = request.args.get('Edit')
-    questionsdao.retrieveQuestion(id=id)
-    
-    return render_template("update.html")
+    question =questionsdao.retrieveQuestion(id=id)
+  
+    print(question)
+
+    return render_template("update.html",question=question)
 
 
 @app.route("/delete")

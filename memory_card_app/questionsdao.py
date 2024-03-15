@@ -44,7 +44,7 @@ def retrieveQuestion(id):
     try:
         with sqlite3.connect("memorycards.db") as con:
             cur = con.cursor()
-            question = cur.execute("SELECT id,question,answer FROM questions where id=?",id).fetchall()
+            question = cur.execute("SELECT id,question,answer FROM questions where id=?",(id,)).fetchall()
             
     except:
         pass
@@ -53,18 +53,18 @@ def retrieveQuestion(id):
         return question
 
 
-
 def deleteQuestion(id):
     print("delete question started")
     msg=""
     try:
         with sqlite3.connect("memorycards.db") as con:
             cur = con.cursor()
-            question = cur.execute("DELETE FROM questions where id=?",(id))
+            question = cur.execute("DELETE FROM questions where id=?",(id,))
             con.commit
             msg=f" Record deleted. id is {id}"
-    except:
+    except Exception as err:
         con.rollback()
+        print(err)
         msg="An error occured during delete operation."
         pass
     finally:
