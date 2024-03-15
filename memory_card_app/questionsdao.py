@@ -73,17 +73,22 @@ def deleteQuestion(id):
 
 
 
-def update(id,question,answer):
+def updateQuestion(id,question,answer):
+
     print("update question started")
-    
+    print(f"{id},{question} {answer}")
+    msg="update"
     try:
         with sqlite3.connect("memorycards.db") as con:
             cur = con.cursor()
-            question = cur.execute("UPDATE FROM questions SET question =?, anserr=? where id=?",(question,answer,id))
-            
-    except:
-        pass
+            question = cur.execute("UPDATE questions SET question =?, answer=? where id=?",(question,answer,id))
+            con.commit()
+            msg="Record updated"
+    except Exception as er:
+        print(er)
+        con.rollback()
+        msg="Error occured"
     finally:
         con.close()
-        return question
+        return msg
 

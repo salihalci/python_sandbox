@@ -6,6 +6,8 @@ Edit Questions
         
 <h1>Update</h1>
         <form method="post" action="/update">
+          <input name="id" type="hidden" value="{{ question[0][0] }}">
+          
           <table>
             <tr>
               <th>Query:</th>

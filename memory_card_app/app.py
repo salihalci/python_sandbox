@@ -34,17 +34,27 @@ def list():
     return render_template("list.html",questions=questions)
 
 
-@app.route("/update")
+@app.route("/update",methods=["POST","GET"])
 def update():
     id = request.args.get('Edit')
     question =questionsdao.retrieveQuestion(id=id)
   
     print(question)
+    
+    if request.method=="GET":
+        return render_template("update.html",question=question)
+    
+    if request.method =="POST": #comes from update button of submit form
+        id = request.form.get("id")
+        question = request.form.get("question")
+        answer = request.form.get("answer")
+        msg = questionsdao.updateQuestion(id=id,question=question,answer=answer) 
+        return render_template("update.html",msg=msg, question=question)
+    
+    
 
-    return render_template("update.html",question=question)
 
-
-@app.route("/delete")
+@app.route("/delete",methods=["POST","GET"])
 def delete():
     msg=""
     id = request.args.get('Delete')
