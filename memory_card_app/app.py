@@ -1,5 +1,4 @@
 from flask import Flask,render_template,request
-import sqlite3
 import questionsdao
 
 app = Flask(__name__)
