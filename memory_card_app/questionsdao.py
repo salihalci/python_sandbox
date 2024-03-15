@@ -30,11 +30,60 @@ def retrieveQuestions():
     try:
         with sqlite3.connect("memorycards.db") as con:
             cur = con.cursor()
-            questions = cur.execute("SELECT * FROM questions").fetchall()
+            questions = cur.execute("SELECT id,question,answer FROM questions").fetchall()
             print(type(questions))
     except:
         pass
     finally:
         con.close()
         return questions
+    
+def retrieveQuestion(id):
+    print("retrieve question started")
+    
+    try:
+        with sqlite3.connect("memorycards.db") as con:
+            cur = con.cursor()
+            question = cur.execute("SELECT id,question,answer FROM questions where id=?",id).fetchall()
+            
+    except:
+        pass
+    finally:
+        con.close()
+        return question
+
+
+
+def deleteQuestion(id):
+    print("delete question started")
+    msg=""
+    try:
+        with sqlite3.connect("memorycards.db") as con:
+            cur = con.cursor()
+            question = cur.execute("DELETE FROM questions where id=?",(id))
+            con.commit
+            msg=f" Record deleted. id is {id}"
+    except:
+        con.rollback()
+        msg="An error occured during delete operation."
+        pass
+    finally:
+        con.close()
+        return msg
+
+
+
+def update(id,question,answer):
+    print("update question started")
+    
+    try:
+        with sqlite3.connect("memorycards.db") as con:
+            cur = con.cursor()
+            question = cur.execute("UPDATE FROM questions SET question =?, anserr=? where id=?",(question,answer,id))
+            
+    except:
+        pass
+    finally:
+        con.close()
+        return question
 

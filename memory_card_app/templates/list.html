@@ -14,6 +14,18 @@ Student Flask App with CRUD
         <TD>{{x[0]}}</TD>
         <TD>{{x[1]}}</TD>
         <TD>{{x[2]}}</TD>
+        
+        <TD>
+           <form action="/update" method="get">
+                <button name="Edit" type="submit" value="{{x[0]}}">Edit</button>
+            </form>
+        </TD>
+        <TD>
+            <form action="/delete" method="get">
+                 <button name="Delete" type="submit" value="{{x[0]}}">Delete</button>
+             </form>
+         </TD>
+
    </TR>
     {%endfor%}
 
