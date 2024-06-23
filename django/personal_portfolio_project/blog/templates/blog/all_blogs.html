@@ -16,7 +16,9 @@
 
     {% for blog in blogs%}
 
-    <h2>{{blog.title}}<br /></h2>
+    <a href="{%url 'blog:detail' blog.id %}">
+      <h2>{{blog.title}}<br /></h2>
+    </a>
     <p>
       {{blog.description}}<br />
       {{blog.date}}<br />
