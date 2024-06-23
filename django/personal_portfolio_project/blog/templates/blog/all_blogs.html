@@ -12,15 +12,15 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello</h1>
-    <h2>
-      {% for project in projects %} {{ project.title}}<br />
-      {{ project.description}}<br />
+    <h1>Hello Blog!</h1>
 
-      {{ project.image}} <br />
-      <img src="{{ project.image.url}}" height="100" width="100" /><br />
-      <a href="{{ project.url}}">url</a>
-      {% endfor %}
-    </h2>
+    {% for blog in blogs%}
+
+    <h2>{{blog.title}}<br /></h2>
+    <p>
+      {{blog.description}}<br />
+      {{blog.date}}<br />
+    </p>
+    {%endfor%}
   </body>
 </html>
