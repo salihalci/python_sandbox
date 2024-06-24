@@ -4,3 +4,8 @@ django admin startproject xxx -> to create a new project
 python manage.py runserver ->start server
 python manage.py help
 python .\manage.py startapp generator -> create an app
+
+
+Create Super user
+
+python manage.py createsuperuser
