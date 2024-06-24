@@ -22,5 +22,6 @@ urlpatterns = [
     #Auth 
     path('signup/',views.signupuser,name='signupuser'),
     #TODOs
+    path('current/',views.currenttodos,name='currenttodos'),
 
 ]
