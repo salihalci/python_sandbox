@@ -9,3 +9,14 @@ python .\manage.py startapp generator -> create an app
 Create Super user
 
 python manage.py createsuperuser
+
+
+ModelUser eklendikten sonra makte migration çalıştırmak gerekiyor.
+python .\manage.py makemigrations
+python .\manage.py migrate
+
+Admin panelde görmek için admin.py içerisine eklemek gerekiyor.
+from .models import Todo
+# Register your models here.
+admin.site.register(Todo)
+
