@@ -3,7 +3,8 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import login,logout,authenticate
-
+from .forms import TodoForm
+from .models import Todo
 
 def home(request):
     return render(request,'todo/home.html')
@@ -30,7 +31,8 @@ def signupuser(request):
 
 
 def currenttodos(request):
-    return render(request, 'todo/currenttodos.html',)
+    todos = Todo.objects.filter(user=request.user)
+    return render(request, 'todo/currenttodos.html',{'todos':todos})
 
 
 def logoutuser(request):
@@ -51,3 +53,18 @@ def loginuser(request):
         else:
             login(request, user)
             return redirect('currenttodos')
+
+
+def createtodo(request):
+    if request.method == 'GET': #create todo formunun gösterildiği durum
+        return render(request, 'todo/createtodo.html', {'form': TodoForm() })
+    else: #submit butonuna basıldığı durum
+        if request.method == 'POST':   
+            try:    
+                form = TodoForm(request.POST)
+                newTodo = form.save(commit=False)
+                newTodo.user = request.user
+                newTodo.save()
+                return redirect('currenttodos')
+            except ValueError:
+                return render(request, 'todo/createtodo.html', {'form': TodoForm(),'error':'Bad data passed in' })
