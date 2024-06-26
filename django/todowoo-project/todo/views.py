@@ -91,4 +91,11 @@ def completetodo(request,todo_pk):
         todo.save()
         print("Here")
         return redirect('currenttodos')
+
+def deletetodo(request,todo_pk):
+    todo = get_object_or_404(Todo,pk=todo_pk,user=request.user)
+    
+    if request.method=='POST':
+        todo.delete()
+        return redirect('currenttodos')
     
