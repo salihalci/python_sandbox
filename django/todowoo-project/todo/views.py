@@ -36,7 +36,7 @@ def currenttodos(request):
     return render(request, 'todo/currenttodos.html',{'todos':todos})
 
 def completedtodos(request):
-    todos = Todo.objects.filter(user=request.user, dateCompleted__isnull=False)
+    todos = Todo.objects.filter(user=request.user, dateCompleted__isnull=False).order_by('-dateCompleted')
     return render(request, 'todo/completedtodos.html',{'todos':todos})
 
 def logoutuser(request):
