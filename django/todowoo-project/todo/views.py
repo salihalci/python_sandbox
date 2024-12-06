@@ -97,7 +97,7 @@ def completetodo(request,todo_pk):
         print("Here")
         return redirect('currenttodos')
 @login_required
-def deletetodo(request,todo_pk):
+def deletetodo(request,todo_pk,questions):
     todo = get_object_or_404(Todo,pk=todo_pk,user=request.user)
     
     if request.method=='POST':
