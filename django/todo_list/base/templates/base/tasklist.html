@@ -1,1 +1,18 @@
 <h1>Task List</h1>
+
+<form method="POST" action="/tasklist/">
+    {% csrf_token %}
+    {{TaskForm.title}}
+    {{TaskForm.description}}
+    <input class="btn" type="submit" name="Create Task">
+
+</form>
+
+
+{% for task in tasks%}
+    <p>--------------</p>
+    <p>{{task.title}}</p>
+    <p>{{task.description}}</p>
+    <p>{{task.complete}}</p>
+    <p>{{task.create}}</p>
+{% endfor %}
