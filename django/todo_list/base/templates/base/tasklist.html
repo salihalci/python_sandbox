@@ -16,4 +16,5 @@
     <p>{{task.complete}}</p>
     <p>{{task.create}}</p>
     <p><a href="{% url 'updatetask' task.id %}">Update</a></p>
+    <p><a href="{% url 'deletetask' task.id %}">Delete</a></p>
 {% endfor %}
