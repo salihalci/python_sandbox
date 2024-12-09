@@ -1,20 +1,25 @@
-<h1>Task List</h1>
+{% extends "base.html" %}
 
-<form method="POST" action="/tasklist/">
-    {% csrf_token %}
-    {{TaskForm.title}}
-    {{TaskForm.description}}
-    <input class="btn" type="submit" name="Create Task">
+{%block content%}
+    <h1>Task List</h1>
 
-</form>
+    <form method="POST" action="/tasklist/">
+        {% csrf_token %}
+        {{TaskForm.title}}
+        {{TaskForm.description}}
+        <input class="btn" type="submit" name="Create Task">
+
+    </form>
 
 
-{% for task in tasks%}
-    <p>--------------</p>
-    <p>{{task.title}}</p>
-    <p>{{task.description}}</p>
-    <p>{{task.complete}}</p>
-    <p>{{task.create}}</p>
-    <p><a href="{% url 'updatetask' task.id %}">Update</a></p>
-    <p><a href="{% url 'deletetask' task.id %}">Delete</a></p>
-{% endfor %}
+    {% for task in tasks%}
+        <p>--------------</p>
+        <p>{{task.title}}</p>
+        <p>{{task.description}}</p>
+        <p>{{task.complete}}</p>
+        <p>{{task.create}}</p>
+        <p><a href="{% url 'updatetask' task.id %}">Update</a></p>
+        <p><a href="{% url 'deletetask' task.id %}">Delete</a></p>
+    {% endfor %}
+
+{% endblock %}
