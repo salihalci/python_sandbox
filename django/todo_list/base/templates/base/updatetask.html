@@ -1,9 +1,15 @@
+
+{% extends "base.html" %}
+
+{%block content%}
+
 <h1>Update</h1>
 
 <form method="POST" action="">
     {% csrf_token %}
     {{TaskForm}}
     
-    <input class="btn" type="submit" name="Update Task" value="Update">
+    <button name="Update" class=" btn btn-success" type="submit">Update</button>
 
 </form>
+{% endblock %}
